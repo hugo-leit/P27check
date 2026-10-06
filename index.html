@@ -3,19 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>P27 Check</title>
-<meta name="description" content="P27 Check: constância em hábitos, sem lembretes.">
-<meta name="theme-color" content="#F3F5F0">
+<title>P27</title>
+<meta name="description" content="P27: constância em hábitos, sem lembretes.">
+<meta name="theme-color" content="#153C2D">
+<meta name="color-scheme" content="light">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="P27 Check">
+<meta name="apple-mobile-web-app-title" content="P27">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
-<meta property="og:title" content="P27 Check">
+<link rel="apple-touch-startup-image" href="startup/s-1320x2868.png" media="(device-width:440px) and (device-height:956px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-1206x2622.png" media="(device-width:402px) and (device-height:874px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-1290x2796.png" media="(device-width:430px) and (device-height:932px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-1179x2556.png" media="(device-width:393px) and (device-height:852px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-1284x2778.png" media="(device-width:428px) and (device-height:926px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-1170x2532.png" media="(device-width:390px) and (device-height:844px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-1125x2436.png" media="(device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-1242x2688.png" media="(device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-828x1792.png" media="(device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="startup/s-750x1334.png" media="(device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)">
+<meta property="og:title" content="P27">
 <meta property="og:image" content="logo.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap">
+<style>
+html:not(.p27-ready),html:not(.p27-ready) body{background:#153C2D!important}
+.p27-splash{position:fixed;inset:0;z-index:9999;background:radial-gradient(ellipse 72% 56% at 50% 46%,#1A4535 0%,#153C2D 58%,#112F25 100%);display:grid;place-items:center;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);overflow:hidden;-webkit-user-select:none;user-select:none;touch-action:none}
+.p27-inner{display:flex;flex-direction:column;align-items:center;gap:clamp(16px,3.2vh,30px);transform:translateY(-2.5vh)}
+.p27-mark{display:block;width:min(48vw,210px,50vh);height:auto;overflow:visible;filter:drop-shadow(0 6px 14px rgba(0,0,0,.28));will-change:transform}
+.p27-name{font:500 12.5px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;letter-spacing:.25em;padding-left:.25em;text-transform:uppercase;color:#D9C59A;opacity:0;transform:translateY(5px)}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap"></noscript>
 <style>
 /* Layout: app de uma tela (cabeçalho, área rolável, abas). Hoje é ação, as outras abas são análise.
    Espaços: 4 8 12 16 20 24 32 · Raios: controles 12/14, botões 16, cards 22, pills 999. */
@@ -358,7 +378,7 @@ button.d{cursor:pointer}
 }
 </style>
 <style>
-/* ajustes para rodar como página própria (iPhone / GitHub Pages) */
+/* página própria (iPhone / GitHub Pages) */
 html,body{height:100%;height:100dvh;min-height:-webkit-fill-available;overscroll-behavior:none}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg)}
@@ -372,6 +392,85 @@ body{margin:0;background:var(--bg)}
 </style>
 </head>
 <body>
+<div id="p27-splash" class="p27-splash" aria-hidden="true"><div class="p27-inner">
+<svg id="p27-mark" class="p27-mark" viewBox="225 270 850 710" focusable="false" aria-hidden="true">
+<defs>
+<path id="p27a" d="M440,294 L997,293 L900,378 L807,452 L731,511 L619,603 L471,706 L238,888 L238,730 L380,590 Q395,576 422,571 L606,571 C648,562 668,520 667,473 C666,438 640,410 597,406 L340,408 Q300,432 305,455 Q322,487 420,503 L237,505 L376,332 Q400,298 440,294 Z"/><path id="p27b" d="M709,709 L692,694 L658,712 L519,712 Q460,724 400,771 L416,846 L608,846 Z"/><path id="p27c" d="M875,403 L1062,405 L929,608 L723,966 L565,966 L836,552 L722,549 Z"/>
+<linearGradient id="p27g" gradientUnits="userSpaceOnUse" x1="330" y1="300" x2="760" y2="960"><stop offset="0" stop-color="#F8F1DF"/><stop offset=".45" stop-color="#E3D3A8"/><stop offset="1" stop-color="#B5A372"/></linearGradient>
+<linearGradient id="p27wf"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+<linearGradient id="p27lt"><stop offset="0" stop-color="#C8AF73" stop-opacity="0"/><stop offset=".72" stop-color="#D9C59A" stop-opacity=".55"/><stop offset="1" stop-color="#F3EBDD"/></linearGradient>
+<linearGradient id="p27ly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9C59A" stop-opacity="0"/><stop offset=".5" stop-color="#D9C59A" stop-opacity=".5"/><stop offset="1" stop-color="#D9C59A" stop-opacity="0"/></linearGradient>
+<linearGradient id="p27gl"><stop offset="0" stop-color="#FFF6DF" stop-opacity="0"/><stop offset=".5" stop-color="#FFF6DF" stop-opacity=".95"/><stop offset="1" stop-color="#FFF6DF" stop-opacity="0"/></linearGradient>
+<mask id="p27m" maskUnits="userSpaceOnUse" x="-2000" y="-2000" width="5000" height="5000"><g transform="rotate(-37.9 650 625)"><rect id="p27w1" x="-2350" y="-1200" width="0" height="3600" fill="#fff"/><rect id="p27w2" x="0" y="-1200" width="70" height="3600" fill="url(#p27wf)"/></g></mask>
+<clipPath id="p27cp"><use href="#p27a"/><use href="#p27b"/><use href="#p27c"/></clipPath>
+</defs>
+<g mask="url(#p27m)"><g id="p27sym">
+<g fill="#CDBB8E"><use href="#p27a"/><use href="#p27b"/><use href="#p27c"/></g>
+<g id="p27fin" opacity="0"><g fill="url(#p27g)"><use href="#p27a"/><use href="#p27b"/><use href="#p27c"/></g><g fill="none" stroke="#FFF6DC" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"><use href="#p27a"/><use href="#p27b"/><use href="#p27c"/></g></g>
+</g></g>
+<g clip-path="url(#p27cp)"><g transform="rotate(-37.9 650 625)"><rect id="p27gl" x="0" y="568" width="190" height="20" fill="url(#p27gl)" opacity="0"/></g></g>
+<g id="p27ln" transform="rotate(-37.9 650 625)" opacity="0"><rect id="p27l0" x="0" y="563" width="260" height="30" fill="url(#p27ly)" opacity=".5"/><rect id="p27l1" x="0" y="575.5" width="900" height="5" fill="url(#p27lt)"/></g>
+</svg>
+<div id="p27-name" class="p27-name">P27</div></div></div>
+
+<script>
+(function(){
+var sp=document.getElementById('p27-splash');if(!sp)return;
+var root=document.documentElement,done=false;
+function $(i){return document.getElementById(i)}
+var w1=$('p27w1'),w2=$('p27w2'),fin=$('p27fin'),gl=$('p27gl'),ln=$('p27ln'),l0=$('p27l0'),l1=$('p27l1'),mark=$('p27-mark'),nm=$('p27-name');
+function clamp(x){return x<0?0:x>1?1:x}
+function eio(x){return .5-Math.cos(Math.PI*x)/2}
+function eo(x){return 1-(1-x)*(1-x)}
+function finish(){
+  if(done)return;done=true;
+  try{sp.parentNode.removeChild(sp)}catch(e){sp.style.display='none'}
+  root.classList.add('p27-ready');
+  var tc=document.querySelector('meta[name=theme-color]');if(tc)tc.setAttribute('content','#F3F5F0');
+}
+function frame(t){
+  var s=-1100+2200*eio(clamp((t-120)/700));
+  w1.setAttribute('width',3000+s-70);
+  w2.setAttribute('x',650+s-70);
+  l1.setAttribute('x',650+s-900);l0.setAttribute('x',650+s-260);
+  ln.setAttribute('opacity',t<120?0:(1-clamp((t-640)/200)));
+  fin.setAttribute('opacity',eo(clamp((t-700)/250)));
+  var u=clamp((t-850)/200);
+  gl.setAttribute('x',650+(-560+1120*eo(u))-95);
+  gl.setAttribute('opacity',Math.sin(Math.PI*u));
+  var k=1;
+  if(t>=950&&t<1120)k=t<1030?1+.012*(t-950)/80:1+.012*(1-(t-1030)/90);
+  mark.style.transform=k===1?'':'scale('+k.toFixed(4)+')';
+  var n=eo(clamp((t-1000)/250));
+  nm.style.opacity=n;nm.style.transform='translateY('+((1-n)*5).toFixed(2)+'px)';
+  var f=clamp((t-1400)/200);
+  sp.style.opacity=1-f;
+  if(f>0)sp.style.pointerEvents='none';
+}
+function still(){ // sem movimento: símbolo inteiro
+  w1.setAttribute('width',3600);w2.setAttribute('width',0);fin.setAttribute('opacity',1);
+  ln.setAttribute('opacity',0);gl.setAttribute('opacity',0);nm.style.opacity=1;nm.style.transform='none';
+}
+try{
+  if(location.hash==='#p27debug'){window.__p27={frame:frame,still:still,finish:finish};frame(0);return}
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm){
+    still();
+    setTimeout(function(){var t0=null;(function f(n){if(t0===null)t0=n;var x=clamp((n-t0)/200);sp.style.opacity=1-x;if(x>0)sp.style.pointerEvents='none';x<1?requestAnimationFrame(f):finish()})(performance.now())},450);
+  }else{
+    frame(0);
+    var t0=null;
+    (function loop(now){
+      if(t0===null)t0=now;
+      var t=now-t0;
+      if(t>=1600){finish();return}
+      frame(t);requestAnimationFrame(loop);
+    })(performance.now());
+  }
+}catch(e){finish()}
+setTimeout(finish,4000);
+})();
+</script>
 
 
 <div class="stage">
@@ -624,21 +723,21 @@ function renderTop(){
     var sched=itemsFor(cur).filter(function(x){return kind(x,cur)==='sched'});
     var done=sched.filter(function(x){return getS(x.id,cur)}).length;
     var nu=Object.keys(unseen).length;
-    h='<div><div class="eyebrow">P27 Check</div><h1>'+relTitle(cur)+'</h1><div class="date">'+longDate(cur)+'</div></div>'+
+    h='<div><div class="eyebrow">P27</div><h1>'+relTitle(cur)+'</h1><div class="date">'+longDate(cur)+'</div></div>'+
       '<div class="hr"><div class="prog" role="img" aria-label="'+done+' de '+sched.length+' hábitos checados"><div class="ringbox">'+ringSvg(done,sched.length)+'<div class="pn"><b>'+done+'</b><small>/'+sched.length+'</small></div></div><span class="pl">checados</span></div>'+
       '<button class="trophy'+(trophyGlow?' glow':'')+'" data-act="trophy" aria-label="Prêmios'+(nu?', '+nu+' novos':'')+'">'+TROPHY+(nu?'<span class="tbadge">'+nu+'</span>':'')+'</button></div>';
   }else if(tab==='semana'){
     var m=monday(cur);
-    h='<div><div class="eyebrow">P27 Check</div><h1>Semana</h1><div class="date">'+shortDM(m)+' a '+shortDM(addDays(m,6))+'</div></div>';
+    h='<div><div class="eyebrow">P27</div><h1>Semana</h1><div class="date">'+shortDM(m)+' a '+shortDM(addDays(m,6))+'</div></div>';
   }else if(tab==='premios'){
     var PP=computePrizes(),nd=PP.filter(function(p){return earned[p.id]}).length;
-    h='<div><div class="eyebrow">P27 Check</div><h1>Prêmios</h1><div class="date">'+nd+' de '+PP.length+' conquistados</div></div><button class="navb" data-act="pback">‹ Voltar</button>';
+    h='<div><div class="eyebrow">P27</div><h1>Prêmios</h1><div class="date">'+nd+' de '+PP.length+' conquistados</div></div><button class="navb" data-act="pback">‹ Voltar</button>';
   }else if(tab==='ajustes'){
-    h='<div><div class="eyebrow">P27 Check</div><h1>Ajustes</h1><div class="date">hábitos e regras do dia</div></div>';
+    h='<div><div class="eyebrow">P27</div><h1>Ajustes</h1><div class="date">hábitos e regras do dia</div></div>';
   }else if(tab==='peso'){
-    h='<div><div class="eyebrow">P27 Check</div><h1>Peso</h1><div class="date">registro com data, em kg</div></div>';
+    h='<div><div class="eyebrow">P27</div><h1>Peso</h1><div class="date">registro com data, em kg</div></div>';
   }else{
-    h='<div><div class="eyebrow">P27 Check</div><h1>Histórico</h1><div class="date">constância ao longo do mês</div></div>';
+    h='<div><div class="eyebrow">P27</div><h1>Histórico</h1><div class="date">constância ao longo do mês</div></div>';
   }
   document.getElementById('top').innerHTML=h;
 }
@@ -1185,7 +1284,7 @@ function renderImportSheet(){
   sheetMode='import';
   openSheetEl('<div class="scrim" data-act="close"></div><div class="panel" role="dialog" aria-modal="true" aria-label="Importar dados"><div class="grab"></div>'+
     '<div><div class="lbl">Restaurar cópia</div><h2>Importar</h2></div>'+
-    '<p>Escolha um arquivo exportado pelo P27 Check ou cole o texto abaixo. Isso substitui os dados atuais.</p>'+
+    '<p>Escolha um arquivo exportado pelo P27 ou cole o texto abaixo. Isso substitui os dados atuais.</p>'+
     '<input type="file" id="imp-file" accept=".json,application/json,text/plain" hidden>'+
     '<button class="btn alt full" data-act="dpick">Escolher arquivo</button>'+
     '<textarea id="imp-txt" class="imp" rows="5" placeholder="Ou cole aqui o conteúdo exportado" aria-label="Conteúdo exportado"></textarea>'+
@@ -1195,7 +1294,7 @@ function renderImportSheet(){
 }
 function importJSON(txt){
   var d;try{d=JSON.parse(txt)}catch(e){return 'Arquivo ou texto inválido.'}
-  if(!d||d.app!=='p27-check'||!Array.isArray(d.H)||!d.C||typeof d.C!=='object'||!Array.isArray(d.W))return 'Este conteúdo não parece ser do P27 Check.';
+  if(!d||d.app!=='p27-check'||!Array.isArray(d.H)||!d.C||typeof d.C!=='object'||!Array.isArray(d.W))return 'Este conteúdo não parece ser do P27.';
   for(var i=0;i<d.H.length;i++){var h=d.H[i];if(!h||typeof h.id!=='string'||typeof h.name!=='string'||!Array.isArray(h.days))return 'Lista de hábitos inconsistente.'}
   for(var j=0;j<d.W.length;j++){if(!d.W[j]||typeof d.W[j].d!=='string'||typeof d.W[j].kg!=='number')return 'Registros de peso inconsistentes.'}
   H=d.H;C=d.C;R=d.R||{};N=d.N||{};W=d.W;seedsOn=d.seeds===true;

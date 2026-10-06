@@ -1,10 +1,10 @@
 {
-  "name": "P27 Check",
+  "name": "P27",
   "short_name": "P27",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#1E3A2D",
-  "theme_color": "#1E3A2D",
+  "background_color": "#153C2D",
+  "theme_color": "#153C2D",
   "lang": "pt-BR",
   "icons": [
     {
