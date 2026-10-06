@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>P27 Check</title>
 <meta name="description" content="P27 Check: constância em hábitos, sem lembretes.">
-<meta name="theme-color" content="#1E3A2D">
+<meta name="theme-color" content="#F3F5F0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="P27 Check">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -357,6 +356,19 @@ button.d{cursor:pointer}
   .chk.pop,.chk.pop svg path,.hrow.pop,.trophy.glow{animation:none}
   .chk,.sw::after,.chev{transition:none}
 }
+</style>
+<style>
+/* ajustes para rodar como página própria (iPhone / GitHub Pages) */
+html,body{height:100%;height:100dvh;min-height:-webkit-fill-available;overscroll-behavior:none}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg)}
+@media (max-width:699px){
+  .stage{height:100dvh;padding:0;align-items:stretch}
+  .shell{height:100dvh;max-width:none;max-height:none;border:0;border-radius:0}
+}
+.top{padding-top:calc(var(--s5) + env(safe-area-inset-top,0px))}
+.tabs{padding-bottom:calc(var(--s2) + env(safe-area-inset-bottom,0px))}
+.panel{padding-bottom:calc(var(--s6) + env(safe-area-inset-bottom,0px))}
 </style>
 </head>
 <body>
